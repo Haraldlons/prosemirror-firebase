@@ -1,8 +1,8 @@
 
-import {
-  schema,
-} from '@aeaton/react-prosemirror-config-default'
-// import {schema} from "prosemirror-schema-basic"
+// import {
+//   schema,
+// } from '@aeaton/react-prosemirror-config-default'
+import {schema} from "prosemirror-schema-basic"
 import {Schema, DOMParser} from "prosemirror-model"
 import {addListNodes} from "prosemirror-schema-list"
 
@@ -10,7 +10,10 @@ import { FirebaseEditor } from "./TextEditor";
 import { EditorState } from 'prosemirror-state'
 import { EditorView } from 'prosemirror-view'
 import {database} from './firebase';;
+console.log("hei")
 
+
+setTimeout(() =>{
 
 console.log("Running AddTextEditor")
 var defaultDatabase = database;
@@ -44,3 +47,5 @@ const hei = new FirebaseEditor({
     console.log('editor ready')
 }).catch(console.error)
 console.log(hei)
+
+}, 2000)
